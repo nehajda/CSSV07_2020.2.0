@@ -1,0 +1,4 @@
+!service-v1
+name: WMA.EAST
+serviceDefinition: WMA-2017.1.0
+enabled: true

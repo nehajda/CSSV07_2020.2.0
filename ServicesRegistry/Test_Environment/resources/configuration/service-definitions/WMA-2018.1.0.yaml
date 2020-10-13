@@ -1,0 +1,9 @@
+!service-definition-v1
+name: WMA-2018.1.0
+description: WMA adapter for WMS
+requests:
+- "GS1:despatchAdviceMessage:GS1_JDA 2016.1.0"
+- "GS1:despatchAdviceMessage:GS1_JDA 2017.1.0"
+- "GS1:despatchAdviceMessage:GS1_JDA 2018.1.0"
+
+- "GS1:orderMessage:GS1_JDA 2018.1.2"

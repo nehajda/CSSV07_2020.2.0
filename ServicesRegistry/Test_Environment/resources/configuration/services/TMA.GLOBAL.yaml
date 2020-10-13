@@ -1,0 +1,22 @@
+!adapter-service-binding-v1
+name: TMA.GLOBAL
+serviceDefinition: TMA-2018.1.0
+enabled: true
+outboundEndpoints:
+- name: JMB1
+  flow:
+    name: flowJmsOut
+    parameters:
+    - name: queue
+      value: jms.flow.jmb1
+  needsPipe: false
+- name: errorFlow
+  flow:
+    name: flowJmsOut
+    parameters:
+    - name: queue
+      value: DLQ
+outboundMappings:
+  - receiver: '*'
+    request: '*:*:*'
+    outboundEndpoint: 'JMB1'

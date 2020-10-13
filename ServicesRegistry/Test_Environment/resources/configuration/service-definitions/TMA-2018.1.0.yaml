@@ -1,0 +1,47 @@
+!adapter-service-definition-v1
+name: TMA-2018.1.0
+description: TMA adapter for TMS
+inbound:
+  requests:
+  - message: 'GS1:despatchAdviceMessage:GS1_JDA 2016.0.0'
+    flow: 'flow-in-GS1-dispatchAdviceMessage-2016.0.0'
+  - message: 'GS1:despatchAdviceMessage:GS1_JDA 2016.1.0'
+    flow: 'flow-in-GS1-dispatchAdviceMessage-2016.1.0'
+  - message: 'GS1:despatchAdviceMessage:GS1_JDA 2016.2.0'
+    flow: 'flow-in-GS1-dispatchAdviceMessage-2016.2.0'
+  - message: 'GS1:TransferOrder:GS1_JDA 2016.1.0'
+    flow: 'flow-in-GS1-TransferOrder-2016.1.0'
+outbound:
+  responses:
+  - message: 'GS1:despatchAdviceMessage:GS1_JDA 2016.1.0'
+    commonFlow: 'flow-out-Common-Flow'
+    flow: 'flow-out-GS1-despatchAdviceMessage-2016.1.0'
+  - message: 'GS1:despatchAdviceMessage:GS1_JDA 2017.1.0'
+    commonFlow: 'flow-out-Common-Flow'
+    flow: 'flow-out-GS1-despatchAdviceMessage-2017.1.0'
+  - message: 'GS1:despatchAdviceMessage:GS1_JDA 2018.1.0'
+    commonFlow: 'flow-out-Common-Flow'
+    flow: 'flow-out-GS1-despatchAdviceMessage-2018.1.0'
+
+#!service-definition-v1
+#name: TMA-2018.1.0
+#description: TMA adapter for TMS
+#requests:
+#- "GS1:despatchAdviceMessage:GS1_JDA 2016.1.0"
+#- "GS1:despatchAdviceMessage:GS1_JDA 2017.1.0"
+#- "GS1:despatchAdviceMessage:GS1_JDA 2018.1.0"
+#
+#- "GS1:TransferOrder:GS1_JDA 2017.2.0"
+#- "GS1:PurchaseOrder:GS1_JDA 2017.2.0"
+#- "GS1:OrderRelease:GS1_JDA 2017.2.0"
+#- "GS1:warehousingOutboundNotificationMessage:GS1_JDA 2017.2.0"
+#- "GS1:transportPickUpDropOffConfirmationMessage:GS1_JDA 2017.2.0"
+#- "GS1:receivingAdviceMessage:GS1_JDA 2017.2.0"
+#- "GS1:warehousingOutboundInstructionMessage:GS1_JDA 2017.2.0"
+#
+## Master data operation
+#- "GS1:locationMessage:GS1_JDA 2017.2.0"
+#- "GS1:partyMessage:GS1_JDA 2017.2.0"
+#- "GS1:itemMessage:GS1_JDA 2017.2.0"
+
+
