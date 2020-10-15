@@ -10,7 +10,7 @@ mb:
       checkConnectivity: true
       queueName: "MB_PIPE"
 ## Please uncomment the property and update the broker url      
-      brokerURL: "failover:tcp://in2npdvdcssv06:61616"
+      brokerURL: "failover:tcp://in2npdvdcssv07:61616"
       maxConnections: "30"
       concurrentConsumers: "30"
       initialRedeliveryDelay: "20000"
